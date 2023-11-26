@@ -6,7 +6,7 @@
 /*   By: alouribi <alouribi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 10:55:05 by alouribi          #+#    #+#             */
-/*   Updated: 2023/11/20 13:46:05 by alouribi         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:50:59 by alouribi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 
 	i = 0;
 	j = 0;
-	if (str == NULL && len == 0)
+	if (str == NULL && len <= 0)
 		return (0);
 	if (to_find[0] == 0)
 		return ((char *)str);

@@ -6,7 +6,7 @@
 /*   By: alouribi <alouribi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 09:48:05 by alouribi          #+#    #+#             */
-/*   Updated: 2023/11/19 12:42:36 by alouribi         ###   ########.fr       */
+/*   Updated: 2023/11/24 16:10:18 by alouribi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-/*int main()
-{
-	printf("%s", ft_toupper('d'));
-}*/

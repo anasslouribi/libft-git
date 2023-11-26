@@ -1,42 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alouribi <alouribi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 16:02:47 by alouribi          #+#    #+#             */
-/*   Updated: 2023/11/19 12:37:43 by alouribi         ###   ########.fr       */
+/*   Created: 2023/11/16 13:38:58 by alouribi          #+#    #+#             */
+/*   Updated: 2023/11/24 16:08:28 by alouribi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	int	l;
-	int	i;
-
-	l = ft_lstsize(lst);
-	i = 0;
-	while (i < l - 1)
+	if (!new)
+		return ;
+	if (*lst == NULL)
+		*lst = new;
+	else
 	{
-		lst = lst->next;
-		i++;
+		new->next = *lst;
+		*lst = new;
 	}
-	return (lst);
 }
-/*int main()
-{
-    void *com ="gfdhjk";
-    t_list *head = NULL;
-    t_list *k1 = ft_lstnew("fghjk");
-    
-    head = k1;
-    
-    t_list *k2 = ft_lstnew("fqqqqqqk");
-    
-    k1->next=k2;
-    t_list *res = ft_lstlast(head);
-    printf("%s\n",  (char *)res->content);
-}*/

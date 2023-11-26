@@ -6,7 +6,7 @@
 /*   By: alouribi <alouribi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 09:52:33 by alouribi          #+#    #+#             */
-/*   Updated: 2023/11/19 14:29:41 by alouribi         ###   ########.fr       */
+/*   Updated: 2023/11/25 11:50:52 by alouribi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-/*int main() {
-    char buffer[10];  // A character array of size 10
-
-    // Fill the buffer with a specific value (e.g., 0x42)
-    ft_memset(buffer, -1337, sizeof(buffer));
-
-    // Now, buffer contains 0x42
-    for (int i = 0; i < sizeof(buffer); i++) {
-        printf("%d", buffer[i]);
-    }
-    return 0;
-}*/

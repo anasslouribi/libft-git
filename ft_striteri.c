@@ -6,7 +6,7 @@
 /*   By: alouribi <alouribi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 08:57:15 by alouribi          #+#    #+#             */
-/*   Updated: 2023/11/20 14:02:45 by alouribi         ###   ########.fr       */
+/*   Updated: 2023/11/24 16:09:45 by alouribi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		return ;
 	while (s[i])
 	{
-		(*f)(i, &s[i]);
+		f(i, &s[i]);
 		i++;
 	}
 }

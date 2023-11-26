@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alouribi <alouribi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 13:14:42 by alouribi          #+#    #+#             */
-/*   Updated: 2023/11/24 16:09:14 by alouribi         ###   ########.fr       */
+/*   Created: 2023/11/21 10:57:29 by alouribi          #+#    #+#             */
+/*   Updated: 2023/11/24 16:08:55 by alouribi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	unsigned char	*de;
-	unsigned char	*sc;
+	t_list	*res;
+	t_list	*head;
 
-	de = (unsigned char *)dest;
-	sc = (unsigned char *)src;
-	if (!de && !sc)
+	if (!lst || !f)
 		return (NULL);
-	if (de > sc)
+	head = NULL;
+	while (lst)
 	{
-		while (n > 0)
+		res = ft_lstnew(f(lst->content));
+		if (!res)
 		{
-			de[n - 1] = sc[n - 1];
-			n--;
+			ft_lstclear(&res, (*del));
+			return (NULL);
 		}
+		ft_lstadd_back(&head, res);
+		lst = lst->next;
 	}
-	else
-		ft_memcpy(de, sc, n);
-	return (dest);
+	return (head);
 }

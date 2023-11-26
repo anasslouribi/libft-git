@@ -6,7 +6,7 @@
 /*   By: alouribi <alouribi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:33:49 by alouribi          #+#    #+#             */
-/*   Updated: 2023/11/19 17:06:33 by alouribi         ###   ########.fr       */
+/*   Updated: 2023/11/25 16:12:46 by alouribi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*swap_pos(char *dest, int src, int lent)
 	return (dest);
 }
 
-int	count_int(int n)
+static int	count_int(int n)
 {
 	int	i;
 
@@ -81,10 +81,8 @@ char	*ft_itoa(int n)
 {
 	char			*str;
 	unsigned int	p;
-	int				sign;
 	int				l;
 
-	sign = 0;
 	p = 0;
 	str = NULL;
 	if (n < 0)

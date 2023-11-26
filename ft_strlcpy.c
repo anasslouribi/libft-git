@@ -6,7 +6,7 @@
 /*   By: alouribi <alouribi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 09:08:11 by alouribi          #+#    #+#             */
-/*   Updated: 2023/11/20 11:22:15 by alouribi         ###   ########.fr       */
+/*   Updated: 2023/11/24 16:09:58 by alouribi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t s)
 	}
 	return (src_len);
 }
-/*int main()
-{
-	char c[] = "tyuio";
-	char g[] = "rrt";
-	printf("%d",ft_strlcpy(g, c, 3));
-}*/

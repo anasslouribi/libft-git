@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alouribi <alouribi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 11:53:07 by alouribi          #+#    #+#             */
-/*   Updated: 2023/11/20 13:55:40 by alouribi         ###   ########.fr       */
+/*   Created: 2023/11/16 16:02:47 by alouribi          #+#    #+#             */
+/*   Updated: 2023/11/26 13:12:40 by alouribi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (!lst || !del)
-		return ;
-	while (*lst != NULL)
+	int	l;
+	int	i;
+
+	if (!lst)
+		return (0);
+	l = ft_lstsize(lst);
+	i = 0;
+	while (i < l - 1)
 	{
-		del((*lst)->content);
-		free(*lst);
-		*lst = (*lst)->next;
+		lst = lst->next;
+		i++;
 	}
+	return (lst);
 }
-// int main()
-// {
-//     t_list *h;
-//     t_list *h1 = ft_lstnew("tyui");
-//     t_list *h2 = ft_lstnew("ghj");
-//     h = h1;
-//     h1->next= h2;
-//     ft_lstclear(&h);
-// }

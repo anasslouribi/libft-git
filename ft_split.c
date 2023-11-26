@@ -6,7 +6,7 @@
 /*   By: alouribi <alouribi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 08:39:58 by alouribi          #+#    #+#             */
-/*   Updated: 2023/11/20 13:36:16 by alouribi         ###   ########.fr       */
+/*   Updated: 2023/11/25 15:49:57 by alouribi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,14 +93,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (ft_split2((char *)s, i, x, (unsigned char)c));
 }
-/*int main() {
-    char str[] = "   hello!";
-    char del = ' ';
-    char **result = ft_split(str, del);
-    if (result) {
-        for (int i = 0; i < count_word(str, del) + 1; i++) {
-            printf("Substring %d: %s\n", i, result[i]);
-        }
-         return 0;
-    }
-}*/

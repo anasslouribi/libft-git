@@ -6,7 +6,7 @@
 /*   By: alouribi <alouribi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:04:26 by alouribi          #+#    #+#             */
-/*   Updated: 2023/11/19 11:46:01 by alouribi         ###   ########.fr       */
+/*   Updated: 2023/11/24 16:09:11 by alouribi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*int main()
-{
-    int b = -1337;
-    int c = 56;
-    memcpy(c, b, sizeof(b));
-  }*/

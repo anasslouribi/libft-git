@@ -6,7 +6,7 @@
 /*   By: alouribi <alouribi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 18:03:32 by alouribi          #+#    #+#             */
-/*   Updated: 2023/11/20 13:02:42 by alouribi         ###   ########.fr       */
+/*   Updated: 2023/11/24 16:10:10 by alouribi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,16 +62,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	j = ft_strlen(s1) - 1;
 	while (j >= 0 && ft_check(s1[j], (char *)set) != 0)
 		j--;
-	l = j - i + 1;
+	if (j < 0)
+		l = 0;
+	else
+		l = j - i + 1;
 	str = (char *)malloc((l + 1) * sizeof(char));
 	if (!str)
 		return (0);
 	str = all_cases(j, l, (char *)s1 + i, str);
 	return (str);
 }
-/*int main() {
-    char input_string[] = "               ";
-    char delimiter[] = " ";
-    char *result = ft_strtrim(input_string, delimiter);
-            printf("Substring: %s\n", result);
-}*/

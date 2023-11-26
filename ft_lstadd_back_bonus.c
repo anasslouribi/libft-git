@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alouribi <alouribi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/19 12:40:11 by alouribi          #+#    #+#             */
-/*   Updated: 2023/11/20 10:47:59 by alouribi         ###   ########.fr       */
+/*   Created: 2023/11/17 10:02:16 by alouribi          #+#    #+#             */
+/*   Updated: 2023/11/24 16:08:24 by alouribi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*int	main(void)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	printf("kharya");
-}*/
+	t_list	*ptr;
+
+	ptr = *lst;
+	if (ptr == NULL)
+	{
+		*lst = new;
+		return ;
+	}
+	ptr = ft_lstlast(*lst);
+	ptr->next = new;
+}
